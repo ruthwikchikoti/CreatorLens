@@ -49,8 +49,6 @@ Enjoy a clean and neat analytics experience!
 **DEMO**
 <br>
 
-## DEMO
-
 ### Video:
 [![Demo video of CreatorLens](demo_video.webm)](https://drive.google.com/file/d/1HMsGZbKULsqfRGAl0qzevFZ6zM555CTp/view?usp=sharing)
 
