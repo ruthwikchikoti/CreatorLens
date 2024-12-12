@@ -1,0 +1,18 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "CreatorLens - Advanced YouTube Analytics",
+  "version": "1.2",
+  "manifest_version": 3,
+  "description": "Get deep insights into YouTube channels with advanced analytics, trends, and audience engagement metrics.",
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ]
+}

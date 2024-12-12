@@ -1,0 +1,270 @@
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    overflow: auto; 
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    height: 80vh;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1), transparent);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-container {
+    position: relative;
+    width: 200px;  
+    height: 200px; 
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 15px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    box-shadow: 
+        0 0 40px rgba(96, 165, 250, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: pulse 3s ease-in-out infinite;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    width: 80%;  
+    height: 80%; 
+    margin: 10%; 
+    object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.5));
+    animation: none;
+    transition: transform 0.3s ease;
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.hero-text {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 40px 0 20px;
+    background: linear-gradient(45deg, #60a5fa, #3b82f6, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 3s ease infinite;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.text, .logotext {
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+.logotext {
+    font-size: 2em;
+    color: #ff6347;
+}
+
+.buttonId {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #3b82f6, #60a5fa);
+    color: #ffffff;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 30px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    margin-top: 20px;
+}
+
+.buttonId:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+.button-link {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #4f46e5, #60a5fa);
+    color: #ffffff;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 4px 15px rgba(79, 70, 229, 0.4),
+        inset 0 0 0 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.button-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 20px rgba(79, 70, 229, 0.6),
+        inset 0 0 60px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(45deg, #4338ca, #3b82f6);
+}
+
+.button-link::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.2),
+        transparent,
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.button-link:hover::after {
+    animation: shine 1.5s ease;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.about-section, .features-section, .install-section {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+    margin: 30px auto;
+    padding: 50px;
+    position: relative;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 80%;
+    max-width: 1000px;
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.about-section::before, .features-section::before, .install-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.about-section:hover, .features-section:hover, .install-section:hover {
+    transform: translateY(-5px);
+}
+
+.features-list {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.feature-item {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(79, 70, 229, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    width: 80%;
+    color: #ffffff;
+    margin: 15px 0;
+    padding: 16px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover {
+    transform: translateX(10px);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(79, 70, 229, 0.15));
+}
+
+.footer {
+    position: relative; /* Change this line */
+    text-align: center;
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.aboutfeatures {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #fff;
+    }
+
+    .aboutfeatures {
+        flex-direction: column;
+    }
+
+    .text {
+        font-size: 1em;
+        margin-top: 20px;
+        line-height: 1.4;
+    }
+
+    .logotext {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+
+    .buttonId {
+        padding: 10px 20px;
+        font-size: 1em;
+        margin-top: 15px;
+    }
+}
